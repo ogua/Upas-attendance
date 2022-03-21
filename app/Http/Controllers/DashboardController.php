@@ -85,7 +85,7 @@ class DashboardController extends Controller
 
         	$onlineusers = User::where('is_active','1')->get()->count();
 
-        	$hall = Hall::all()->count();
+        	//$hall = Hall::all()->count();
 
         	$curl = curl_init();
 
@@ -123,17 +123,17 @@ class DashboardController extends Controller
 			->get();
 
 
-			$paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
-			->get();
+			// $paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
+			// ->get();
 
-			$paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
-			->get();
+			// $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
+			// ->get();
 
-			$paythismonth = Payroll::whereMonth('created_at', date('m'))
-			->get();
+			// $paythismonth = Payroll::whereMonth('created_at', date('m'))
+			// ->get();
 
-			$paythisyear = Payroll::whereYear('created_at', date('Y'))
-			->get();
+			// $paythisyear = Payroll::whereYear('created_at', date('Y'))
+			// ->get();
 
 
 			$leave = Staffleave::all()->count();
@@ -167,16 +167,8 @@ class DashboardController extends Controller
             	'totaldegreecourse' => $totaldegreecourse,
             	'totaldiplomacourse' => $totaldiplomacourse,
             	'onlineusers' => $onlineusers,
-            	'hall' => $hall,
             	'sms' => $sms,
             	'online' => $online,
-            	'totaltodaya' => $totaltoday,
-            	'totalmonth' => $totalmonth,
-            	'totalyear' => $totalyear,
-            	'paylastmonth' => $paylastmonth,
-            	'paytoday' => $paytoday,
-            	'paythismonth' => $paythismonth,
-            	'paythisyear' => $paythisyear,
             	'leave' => $leave,
             	'leaveapp' => $leaveapp,
             	'leavereg' => $leavereg,
@@ -241,7 +233,7 @@ class DashboardController extends Controller
 
         	$onlineusers = User::where('is_active','1')->get()->count();
 
-        	$hall = Hall::all()->count();
+        	//$hall = Hall::all()->count();
 
         	$curl = curl_init();
 
@@ -279,21 +271,21 @@ class DashboardController extends Controller
 			->get();
 
 
-			$paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
-			->where('user_id', auth()->user()->id)
-			->get();
+			// $paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
+			// ->where('user_id', auth()->user()->id)
+			// ->get();
 
-			$paytoday = Payroll::
-			where('user_id', auth()->user()->id)->whereMonth('created_at', \Carbon\Carbon::today())
-			->get();
+			// $paytoday = Payroll::
+			// where('user_id', auth()->user()->id)->whereMonth('created_at', \Carbon\Carbon::today())
+			// ->get();
 
-			$paythismonth = Payroll::
-			where('user_id', auth()->user()->id)->whereMonth('created_at', date('m'))
-			->get();
+			// $paythismonth = Payroll::
+			// where('user_id', auth()->user()->id)->whereMonth('created_at', date('m'))
+			// ->get();
 
-			$paythisyear = Payroll::
-			where('user_id', auth()->user()->id)->whereYear('created_at', date('Y'))
-			->get();
+			// $paythisyear = Payroll::
+			// where('user_id', auth()->user()->id)->whereYear('created_at', date('Y'))
+			// ->get();
 
 
 			$leave = Staffleave::where('user_id',auth()->user()->id)->get()->count();
@@ -331,16 +323,8 @@ class DashboardController extends Controller
             	'totaldegreecourse' => $totaldegreecourse,
             	'totaldiplomacourse' => $totaldiplomacourse,
             	'onlineusers' => $onlineusers,
-            	'hall' => $hall,
             	'sms' => $sms,
             	'online' => $online,
-            	'totaltodaya' => $totaltoday,
-            	'totalmonth' => $totalmonth,
-            	'totalyear' => $totalyear,
-            	'paylastmonth' => $paylastmonth,
-            	'paytoday' => $paytoday,
-            	'paythismonth' => $paythismonth,
-            	'paythisyear' => $paythisyear,
             	'leave' => $leave,
             	'leaveapp' => $leaveapp,
             	'leavereg' => $leavereg,
@@ -406,7 +390,7 @@ class DashboardController extends Controller
 
             $onlineusers = User::where('is_active','1')->get()->count();
 
-            $hall = Hall::all()->count();
+            //$hall = Hall::all()->count();
 
             $curl = curl_init();
 
@@ -444,17 +428,17 @@ class DashboardController extends Controller
             ->get();
 
 
-            $paylastmonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m')- 1)
-            ->get();
+            // $paylastmonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m')- 1)
+            // ->get();
 
-            $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
-            ->get();
+            // $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
+            // ->get();
 
-            $paythismonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m'))
-            ->get();
+            // $paythismonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m'))
+            // ->get();
 
-            $paythisyear = Payroll::where('user_id',auth()->user()->id)->whereYear('created_at', date('Y'))
-            ->get();
+            // $paythisyear = Payroll::where('user_id',auth()->user()->id)->whereYear('created_at', date('Y'))
+            // ->get();
 
             $leave = Staffleave::where('user_id',auth()->user()->id)->get()->count();
 
@@ -489,16 +473,9 @@ class DashboardController extends Controller
                 'totaldegreecourse' => $totaldegreecourse,
                 'totaldiplomacourse' => $totaldiplomacourse,
                 'onlineusers' => $onlineusers,
-                'hall' => $hall,
                 'sms' => $sms,
                 'online' => $online,
-                'totaltodaya' => $totaltoday,
-                'totalmonth' => $totalmonth,
-                'totalyear' => $totalyear,
-                'paylastmonth' => $paylastmonth,
-                'paytoday' => $paytoday,
-                'paythismonth' => $paythismonth,
-                'paythisyear' => $paythisyear,
+               
                 'leave' => $leave,
                 'leaveapp' => $leaveapp,
                 'leavereg' => $leavereg,
@@ -565,7 +542,7 @@ class DashboardController extends Controller
 
             $onlineusers = User::where('is_active','1')->get()->count();
 
-            $hall = Hall::all()->count();
+            //$hall = Hall::all()->count();
 
             $curl = curl_init();
 
@@ -603,17 +580,17 @@ class DashboardController extends Controller
             ->get();
 
 
-            $paylastmonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m')- 1)
-            ->get();
+            // $paylastmonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m')- 1)
+            // ->get();
 
-            $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
-            ->get();
+            // $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
+            // ->get();
 
-            $paythismonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m'))
-            ->get();
+            // $paythismonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m'))
+            // ->get();
 
-            $paythisyear = Payroll::where('user_id',auth()->user()->id)->whereYear('created_at', date('Y'))
-            ->get();
+            // $paythisyear = Payroll::where('user_id',auth()->user()->id)->whereYear('created_at', date('Y'))
+            // ->get();
 
             $leave = Staffleave::where('user_id',auth()->user()->id)->get()->count();
 
@@ -648,16 +625,9 @@ class DashboardController extends Controller
                 'totaldegreecourse' => $totaldegreecourse,
                 'totaldiplomacourse' => $totaldiplomacourse,
                 'onlineusers' => $onlineusers,
-                'hall' => $hall,
                 'sms' => $sms,
                 'online' => $online,
-                'totaltodaya' => $totaltoday,
-                'totalmonth' => $totalmonth,
-                'totalyear' => $totalyear,
-                'paylastmonth' => $paylastmonth,
-                'paytoday' => $paytoday,
-                'paythismonth' => $paythismonth,
-                'paythisyear' => $paythisyear,
+                
                 'leave' => $leave,
                 'leaveapp' => $leaveapp,
                 'leavereg' => $leavereg,
@@ -725,7 +695,7 @@ class DashboardController extends Controller
 
             $onlineusers = User::where('is_active','1')->get()->count();
 
-            $hall = Hall::all()->count();
+            //$hall = Hall::all()->count();
 
             $curl = curl_init();
 
@@ -763,17 +733,17 @@ class DashboardController extends Controller
             ->get();
 
 
-            $paylastmonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m')- 1)
-            ->get();
+            // $paylastmonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m')- 1)
+            // ->get();
 
-            $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
-            ->get();
+            // $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
+            // ->get();
 
-            $paythismonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m'))
-            ->get();
+            // $paythismonth = Payroll::where('user_id',auth()->user()->id)->whereMonth('created_at', date('m'))
+            // ->get();
 
-            $paythisyear = Payroll::where('user_id',auth()->user()->id)->whereYear('created_at', date('Y'))
-            ->get();
+            // $paythisyear = Payroll::where('user_id',auth()->user()->id)->whereYear('created_at', date('Y'))
+            // ->get();
 
             $leave = Staffleave::where('user_id',auth()->user()->id)->get()->count();
 
@@ -808,16 +778,9 @@ class DashboardController extends Controller
                 'totaldegreecourse' => $totaldegreecourse,
                 'totaldiplomacourse' => $totaldiplomacourse,
                 'onlineusers' => $onlineusers,
-                'hall' => $hall,
                 'sms' => $sms,
                 'online' => $online,
-                'totaltodaya' => $totaltoday,
-                'totalmonth' => $totalmonth,
-                'totalyear' => $totalyear,
-                'paylastmonth' => $paylastmonth,
-                'paytoday' => $paytoday,
-                'paythismonth' => $paythismonth,
-                'paythisyear' => $paythisyear,
+                
                 'leave' => $leave,
                 'leaveapp' => $leaveapp,
                 'leavereg' => $leavereg,
@@ -886,7 +849,7 @@ class DashboardController extends Controller
 
         	$onlineusers = User::where('is_active','1')->get()->count();
 
-        	$hall = Hall::all()->count();
+        	//$hall = Hall::all()->count();
 
         	$curl = curl_init();
 
@@ -924,17 +887,17 @@ class DashboardController extends Controller
 			->get();
 
 
-			$paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
-			->get();
+			// $paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
+			// ->get();
 
-			$paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
-			->get();
+			// $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
+			// ->get();
 
-			$paythismonth = Payroll::whereMonth('created_at', date('m'))
-			->get();
+			// $paythismonth = Payroll::whereMonth('created_at', date('m'))
+			// ->get();
 
-			$paythisyear = Payroll::whereYear('created_at', date('Y'))
-			->get();
+			// $paythisyear = Payroll::whereYear('created_at', date('Y'))
+			// ->get();
 
 
 			$leave = Staffleave::where('user_id',auth()->user()->id)->get()->count();
@@ -972,16 +935,9 @@ class DashboardController extends Controller
             	'totaldegreecourse' => $totaldegreecourse,
             	'totaldiplomacourse' => $totaldiplomacourse,
             	'onlineusers' => $onlineusers,
-            	'hall' => $hall,
             	'sms' => $sms,
             	'online' => $online,
-            	'totaltodaya' => $totaltoday,
-            	'totalmonth' => $totalmonth,
-            	'totalyear' => $totalyear,
-            	'paylastmonth' => $paylastmonth,
-            	'paytoday' => $paytoday,
-            	'paythismonth' => $paythismonth,
-            	'paythisyear' => $paythisyear,
+            	
             	'leave' => $leave,
             	'leaveapp' => $leaveapp,
             	'leavereg' => $leavereg,
@@ -1048,7 +1004,7 @@ class DashboardController extends Controller
 
             $onlineusers = User::where('is_active','1')->get()->count();
 
-            $hall = Hall::all()->count();
+            //$hall = Hall::all()->count();
 
             $curl = curl_init();
 
@@ -1086,17 +1042,17 @@ class DashboardController extends Controller
             ->get();
 
 
-            $paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
-            ->get();
+            // $paylastmonth = Payroll::whereMonth('created_at', date('m')- 1)
+            // ->get();
 
-            $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
-            ->get();
+            // $paytoday = Payroll::whereMonth('created_at', \Carbon\Carbon::today())
+            // ->get();
 
-            $paythismonth = Payroll::whereMonth('created_at', date('m'))
-            ->get();
+            // $paythismonth = Payroll::whereMonth('created_at', date('m'))
+            // ->get();
 
-            $paythisyear = Payroll::whereYear('created_at', date('Y'))
-            ->get();
+            // $paythisyear = Payroll::whereYear('created_at', date('Y'))
+            // ->get();
 
 
             $leave = Staffleave::where('user_id',auth()->user()->id)->get()->count();
@@ -1134,16 +1090,9 @@ class DashboardController extends Controller
                 'totaldegreecourse' => $totaldegreecourse,
                 'totaldiplomacourse' => $totaldiplomacourse,
                 'onlineusers' => $onlineusers,
-                'hall' => $hall,
                 'sms' => $sms,
                 'online' => $online,
-                'totaltodaya' => $totaltoday,
-                'totalmonth' => $totalmonth,
-                'totalyear' => $totalyear,
-                'paylastmonth' => $paylastmonth,
-                'paytoday' => $paytoday,
-                'paythismonth' => $paythismonth,
-                'paythisyear' => $paythisyear,
+                
                 'leave' => $leave,
                 'leaveapp' => $leaveapp,
                 'leavereg' => $leavereg,

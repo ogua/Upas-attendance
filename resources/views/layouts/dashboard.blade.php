@@ -2,7 +2,7 @@
 
 
 @section('title')
-Ogua School Management System | Dashboard
+UPSA School Management System | Dashboard
 @endsection
 
 @section('mtitle')
