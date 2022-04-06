@@ -172,7 +172,6 @@ public function studentinfo_view($id){
     $peronalinfo = User::with('studentinfos')
     ->with('regacademicyear')
     ->with('Coureregistration')
-    ->with('examresults')
     ->whereHas('studentinfos', function($query) use ($id) {
         $query->where('id',$id);
     })

@@ -1914,7 +1914,6 @@ public function newStudent_register(Request $request){
     'relationship'=>'required',
     'guidianoccupation'=>'required',
     'mobnumber'=>'required',
-    'image'=>'required|image',
     'employed'=>'required'
   ]);
 
@@ -1933,13 +1932,22 @@ public function newStudent_register(Request $request){
 
   $regemail = $indexnumber."@osms.edu.com";
 
+
+  if ($request->has('image')) {
+
+      $pc = $request->file('image')->store('profileimage','public');
+    
+  }
+
+
+
   //create user
   $user = User::create([
    'name' => $request->input('fullname'),
    'email' => $regemail,
    'indexnumber'=> $indexnumber,
    'regemail' => $request->input('email'),
-   'pro_pic'=> $request->file('image')->store('profileimage','public'),
+   'pro_pic'=> $pc ?? '',
    'password' => Hash::make($request->input('email')),
  ]); 
 

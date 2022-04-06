@@ -572,10 +572,6 @@ Route::group(['prefix'=> 'AcademicYear',  'middleware' => 'auth'], function(){
 });
 
 
-
-
-
-
 Route::group(['prefix'=> 'Allstudents',  'middleware' => 'auth'], function(){
 
     Route::get('/all-students-information', [

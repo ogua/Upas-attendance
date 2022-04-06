@@ -78,9 +78,9 @@ Staff Information
     <div class="nav-tabs-custom">
       <ul class="nav nav-tabs">
         <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-        @if($staff->staff->role == 'Lecturer')
+       {{--  @if($staff->staff->role == 'Lecturer')
         <li><a href="#leccourses" data-toggle="tab">Courses Assigned</a></li>
-        @endif
+        @endif --}}
         <li><a href="#document" data-toggle="tab">Document</a></li>
       </ul>
       <div class="tab-content">
@@ -194,7 +194,7 @@ Staff Information
 
   </div>
 
-  <div class="tab-pane" id="leccourses">
+  {{-- <div class="tab-pane" id="leccourses">
 
     <div class="panel panel-primary">
       <div class="panel panel-heading">Courses Assigned</div>
@@ -248,9 +248,9 @@ Staff Information
     </div>
 
   </div>
-  
+   --}}
 
-  <div class="tab-pane" id="payroll">
+  {{-- <div class="tab-pane" id="payroll">
 
     <div class="panel panel-primary">
       <div class="panel panel-heading">Payroll</div>
@@ -361,9 +361,9 @@ Staff Information
   </div>
 
 </div>
+ --}}
 
-
-<div class="tab-pane" id="leave">
+{{-- <div class="tab-pane" id="leave">
 
   <div class="panel panel-primary">
     <div class="panel panel-heading">Leave</div>
@@ -472,7 +472,7 @@ Staff Information
 </div>  
 </div>
 
-</div>
+</div> --}}
 
 
 <div class="tab-pane" id="attendance">

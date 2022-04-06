@@ -63,7 +63,8 @@ login
         {{ __('Forgot Your Password?') }}
       </a>
       @endif
-      <a href="{{ route('home') }}" class="text-center">HomePage</a>                            
+      
+      {{-- <a href="{{ route('home') }}" class="text-center">HomePage</a> --}}                            
 
       <!-- <a href="{{ route('register') }}" class="text-center">new membership</a> -->
 

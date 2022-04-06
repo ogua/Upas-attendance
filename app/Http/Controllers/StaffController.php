@@ -392,17 +392,17 @@ public function Staffprofile(){
   ->where('status','Reverted')->count();
 
     //payroll
-  $payrol = Payroll::where('user_id',auth()->user()->id)->get();
+  // $payrol = Payroll::where('user_id',auth()->user()->id)->get();
 
-  $totalnetsalary = Payroll::where('user_id',auth()->user()->id)->sum('netsalary');;
-  $totalgrosssalary = Payroll::where('user_id',auth()->user()->id)->sum('grosssalary');;
-  $totalnetearning = Payroll::where('user_id',auth()->user()->id)->sum('totalearn');;
-  $totalnetdeduction = Payroll::where('user_id',auth()->user()->id)->sum('totalded');;
+  // $totalnetsalary = Payroll::where('user_id',auth()->user()->id)->sum('netsalary');;
+  // $totalgrosssalary = Payroll::where('user_id',auth()->user()->id)->sum('grosssalary');;
+  // $totalnetearning = Payroll::where('user_id',auth()->user()->id)->sum('totalearn');;
+  // $totalnetdeduction = Payroll::where('user_id',auth()->user()->id)->sum('totalded');;
 
 
 
   return view('Staff.view_staff',['lectid'=> auth()->user()->id,'staff' => $staff, 'staffdoc' => $staffdoc, 'leccources' => $lectcorse, 
-    'courses'=>$courses, 'attendance' => $attendance, 'totalpresent' => $totalpresent, 'totallate' => $totallate, 'totalabsent' => $totalabsent, 'totalholiday' => $totalholiday, 'totalhalfday' => $totalhalfday, 'leave' => $leave, 'totalleave' => $totalleave, 'totalrejected' => $totalrejected, 'totalapproved' => $totalapproved, 'totalrevert' => $totalrevert, 'payrol' => $payrol, 'totalnetsalary' => $totalnetsalary, 'totalgrosssalary' => $totalgrosssalary,'totalnetearning' => $totalnetearning,'totalnetdeduction' => $totalnetdeduction ]);
+    'courses'=>$courses, 'attendance' => $attendance, 'totalpresent' => $totalpresent, 'totallate' => $totallate, 'totalabsent' => $totalabsent, 'totalholiday' => $totalholiday, 'totalhalfday' => $totalhalfday, 'leave' => $leave, 'totalleave' => $totalleave, 'totalrejected' => $totalrejected, 'totalapproved' => $totalapproved, 'totalrevert' => $totalrevert]);
 
 }
 
@@ -456,17 +456,17 @@ public function viewStaff($id){
   ->where('status','Reverted')->count();
 
     //payroll
-  $payrol = Payroll::where('user_id',$id)->get();
+  // $payrol = Payroll::where('user_id',$id)->get();
 
-  $totalnetsalary = Payroll::where('user_id',$id)->sum('netsalary');;
-  $totalgrosssalary = Payroll::where('user_id',$id)->sum('grosssalary');;
-  $totalnetearning = Payroll::where('user_id',$id)->sum('totalearn');;
-  $totalnetdeduction = Payroll::where('user_id',$id)->sum('totalded');;
+  // $totalnetsalary = Payroll::where('user_id',$id)->sum('netsalary');;
+  // $totalgrosssalary = Payroll::where('user_id',$id)->sum('grosssalary');;
+  // $totalnetearning = Payroll::where('user_id',$id)->sum('totalearn');;
+  // $totalnetdeduction = Payroll::where('user_id',$id)->sum('totalded');;
 
 
 
   return view('Staff.view_staff',['lectid'=> $id,'staff' => $staff, 'staffdoc' => $staffdoc, 'leccources' => $lectcorse, 
-    'courses'=>$courses, 'attendance' => $attendance, 'totalpresent' => $totalpresent, 'totallate' => $totallate, 'totalabsent' => $totalabsent, 'totalholiday' => $totalholiday, 'totalhalfday' => $totalhalfday, 'leave' => $leave, 'totalleave' => $totalleave, 'totalrejected' => $totalrejected, 'totalapproved' => $totalapproved, 'totalrevert' => $totalrevert, 'payrol' => $payrol, 'totalnetsalary' => $totalnetsalary, 'totalgrosssalary' => $totalgrosssalary,'totalnetearning' => $totalnetearning,'totalnetdeduction' => $totalnetdeduction ]);
+    'courses'=>$courses, 'attendance' => $attendance, 'totalpresent' => $totalpresent, 'totallate' => $totallate, 'totalabsent' => $totalabsent, 'totalholiday' => $totalholiday, 'totalhalfday' => $totalhalfday, 'leave' => $leave, 'totalleave' => $totalleave, 'totalrejected' => $totalrejected, 'totalapproved' => $totalapproved, 'totalrevert' => $totalrevert ]);
 }
 
 
