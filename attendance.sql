@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2022 at 11:28 AM
+-- Generation Time: Apr 06, 2022 at 03:40 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -41,8 +41,8 @@ CREATE TABLE `academicyears` (
 --
 
 INSERT INTO `academicyears` (`id`, `acdemicyear`, `semester`, `status`, `created_at`, `updated_at`) VALUES
-(1, '2020-2021', 'First Semester', '1', '2022-02-23 20:03:13', '2022-02-23 20:03:13'),
-(2, '2020-2021', 'Second Semester', '0', '2022-02-23 20:03:13', '2022-02-23 20:03:13'),
+(1, '2020-2021', 'First Semester', '0', '2022-02-23 20:03:13', '2022-04-06 11:26:44'),
+(2, '2020-2021', 'Second Semester', '1', '2022-02-23 20:03:13', '2022-04-06 11:26:44'),
 (3, '2021-2022', 'First Semester', '0', '2022-02-23 20:03:13', '2022-02-23 20:03:13'),
 (4, '2021-2022', 'Second Semester', '0', '2022-02-23 20:03:13', '2022-02-23 20:03:13');
 
@@ -119,29 +119,6 @@ CREATE TABLE `attendamces` (
   `month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `day` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `audits`
---
-
-CREATE TABLE `audits` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `user_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `event` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `auditable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `auditable_id` bigint(20) UNSIGNED NOT NULL,
-  `old_values` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `new_values` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `url` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` varchar(1023) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tags` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -319,7 +296,9 @@ INSERT INTO `jobs` (`id`, `queue`, `payload`, `attempts`, `reserved_at`, `availa
 (10, 'default', '{\"uuid\":\"66ba85b8-9e3b-4e61-9bfa-3f2f47a7c2bf\",\"displayName\":\"App\\\\Notifications\\\\Notifyusers\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"delay\":null,\"timeout\":null,\"timeoutAt\":null,\"data\":{\"commandName\":\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\",\"command\":\"O:48:\\\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\\\":13:{s:11:\\\"notifiables\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":4:{s:5:\\\"class\\\";s:8:\\\"App\\\\User\\\";s:2:\\\"id\\\";a:1:{i:0;i:1;}s:9:\\\"relations\\\";a:1:{i:0;s:5:\\\"roles\\\";}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";}s:12:\\\"notification\\\";O:29:\\\"App\\\\Notifications\\\\Notifyusers\\\":11:{s:5:\\\"email\\\";s:10:\\\"Ahmed Ahia\\\";s:4:\\\"name\\\";s:15:\\\"admin@admin.com\\\";s:2:\\\"id\\\";s:36:\\\"b59db938-d1f2-4017-b309-48fcec1af35b\\\";s:6:\\\"locale\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}s:8:\\\"channels\\\";a:1:{i:0;s:8:\\\"database\\\";}s:5:\\\"tries\\\";N;s:7:\\\"timeout\\\";N;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1645646791, 1645646791),
 (11, 'default', '{\"uuid\":\"2a72941b-b42c-43d7-8a83-5fa9da746ea6\",\"displayName\":\"App\\\\Notifications\\\\Notifyusers\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"delay\":null,\"timeout\":null,\"timeoutAt\":null,\"data\":{\"commandName\":\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\",\"command\":\"O:48:\\\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\\\":13:{s:11:\\\"notifiables\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":4:{s:5:\\\"class\\\";s:8:\\\"App\\\\User\\\";s:2:\\\"id\\\";a:1:{i:0;i:1;}s:9:\\\"relations\\\";a:1:{i:0;s:5:\\\"roles\\\";}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";}s:12:\\\"notification\\\";O:29:\\\"App\\\\Notifications\\\\Notifyusers\\\":11:{s:5:\\\"email\\\";s:10:\\\"Ahmed Ahia\\\";s:4:\\\"name\\\";s:15:\\\"admin@admin.com\\\";s:2:\\\"id\\\";s:36:\\\"45d8e0de-fb52-44e3-9a65-b5ba1790e7b6\\\";s:6:\\\"locale\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}s:8:\\\"channels\\\";a:1:{i:0;s:8:\\\"database\\\";}s:5:\\\"tries\\\";N;s:7:\\\"timeout\\\";N;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1645646844, 1645646844),
 (12, 'default', '{\"uuid\":\"9fd0cbdd-6ef4-4fd3-898a-fdcf94fbf538\",\"displayName\":\"App\\\\Notifications\\\\Notifyusers\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"delay\":null,\"timeout\":null,\"timeoutAt\":null,\"data\":{\"commandName\":\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\",\"command\":\"O:48:\\\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\\\":13:{s:11:\\\"notifiables\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":4:{s:5:\\\"class\\\";s:8:\\\"App\\\\User\\\";s:2:\\\"id\\\";a:1:{i:0;i:1;}s:9:\\\"relations\\\";a:1:{i:0;s:5:\\\"roles\\\";}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";}s:12:\\\"notification\\\";O:29:\\\"App\\\\Notifications\\\\Notifyusers\\\":11:{s:5:\\\"email\\\";s:10:\\\"Ahmed Ahia\\\";s:4:\\\"name\\\";s:15:\\\"admin@admin.com\\\";s:2:\\\"id\\\";s:36:\\\"a147979f-8c81-4c81-bd00-42bbc6d0beb6\\\";s:6:\\\"locale\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}s:8:\\\"channels\\\";a:1:{i:0;s:8:\\\"database\\\";}s:5:\\\"tries\\\";N;s:7:\\\"timeout\\\";N;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1645647081, 1645647081),
-(13, 'default', '{\"uuid\":\"2a8d455b-b8e8-4e4d-9fc1-523ad69e0797\",\"displayName\":\"App\\\\Notifications\\\\Notifyusers\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"delay\":null,\"timeout\":null,\"timeoutAt\":null,\"data\":{\"commandName\":\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\",\"command\":\"O:48:\\\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\\\":13:{s:11:\\\"notifiables\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":4:{s:5:\\\"class\\\";s:8:\\\"App\\\\User\\\";s:2:\\\"id\\\";a:1:{i:0;i:1;}s:9:\\\"relations\\\";a:1:{i:0;s:5:\\\"roles\\\";}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";}s:12:\\\"notification\\\";O:29:\\\"App\\\\Notifications\\\\Notifyusers\\\":11:{s:5:\\\"email\\\";s:10:\\\"Ahmed Ahia\\\";s:4:\\\"name\\\";s:15:\\\"admin@admin.com\\\";s:2:\\\"id\\\";s:36:\\\"2a899754-2e1b-403e-b613-2574279a459a\\\";s:6:\\\"locale\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}s:8:\\\"channels\\\";a:1:{i:0;s:8:\\\"database\\\";}s:5:\\\"tries\\\";N;s:7:\\\"timeout\\\";N;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1645647133, 1645647133);
+(13, 'default', '{\"uuid\":\"2a8d455b-b8e8-4e4d-9fc1-523ad69e0797\",\"displayName\":\"App\\\\Notifications\\\\Notifyusers\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"delay\":null,\"timeout\":null,\"timeoutAt\":null,\"data\":{\"commandName\":\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\",\"command\":\"O:48:\\\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\\\":13:{s:11:\\\"notifiables\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":4:{s:5:\\\"class\\\";s:8:\\\"App\\\\User\\\";s:2:\\\"id\\\";a:1:{i:0;i:1;}s:9:\\\"relations\\\";a:1:{i:0;s:5:\\\"roles\\\";}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";}s:12:\\\"notification\\\";O:29:\\\"App\\\\Notifications\\\\Notifyusers\\\":11:{s:5:\\\"email\\\";s:10:\\\"Ahmed Ahia\\\";s:4:\\\"name\\\";s:15:\\\"admin@admin.com\\\";s:2:\\\"id\\\";s:36:\\\"2a899754-2e1b-403e-b613-2574279a459a\\\";s:6:\\\"locale\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}s:8:\\\"channels\\\";a:1:{i:0;s:8:\\\"database\\\";}s:5:\\\"tries\\\";N;s:7:\\\"timeout\\\";N;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1645647133, 1645647133),
+(14, 'default', '{\"uuid\":\"490936fa-29e3-44ce-a571-0a60e277b9a9\",\"displayName\":\"App\\\\Notifications\\\\Notifyusers\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"delay\":null,\"timeout\":null,\"timeoutAt\":null,\"data\":{\"commandName\":\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\",\"command\":\"O:48:\\\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\\\":13:{s:11:\\\"notifiables\\\";O:45:\\\"Illuminate\\\\Contracts\\\\Database\\\\ModelIdentifier\\\":4:{s:5:\\\"class\\\";s:8:\\\"App\\\\User\\\";s:2:\\\"id\\\";a:1:{i:0;i:1;}s:9:\\\"relations\\\";a:1:{i:0;s:5:\\\"roles\\\";}s:10:\\\"connection\\\";s:5:\\\"mysql\\\";}s:12:\\\"notification\\\";O:29:\\\"App\\\\Notifications\\\\Notifyusers\\\":11:{s:5:\\\"email\\\";s:10:\\\"Ahmed Ahia\\\";s:4:\\\"name\\\";s:15:\\\"admin@admin.com\\\";s:2:\\\"id\\\";s:36:\\\"63772fb8-fafa-48c6-950d-f7d5eba5fe86\\\";s:6:\\\"locale\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}s:8:\\\"channels\\\";a:1:{i:0;s:8:\\\"database\\\";}s:5:\\\"tries\\\";N;s:7:\\\"timeout\\\";N;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1648115849, 1648115849),
+(15, 'default', '{\"uuid\":\"cca0a51b-03e4-455b-b4d6-682929320bbd\",\"displayName\":\"App\\\\Notifications\\\\NewstudentMail\",\"job\":\"Illuminate\\\\Queue\\\\CallQueuedHandler@call\",\"maxTries\":null,\"maxExceptions\":null,\"delay\":null,\"timeout\":null,\"timeoutAt\":null,\"data\":{\"commandName\":\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\",\"command\":\"O:48:\\\"Illuminate\\\\Notifications\\\\SendQueuedNotifications\\\":13:{s:11:\\\"notifiables\\\";O:29:\\\"Illuminate\\\\Support\\\\Collection\\\":1:{s:8:\\\"\\u0000*\\u0000items\\\";a:1:{i:0;O:44:\\\"Illuminate\\\\Notifications\\\\AnonymousNotifiable\\\":1:{s:6:\\\"routes\\\";a:1:{s:4:\\\"mail\\\";s:12:\\\"kk@yahoo.com\\\";}}}}s:12:\\\"notification\\\";O:32:\\\"App\\\\Notifications\\\\NewstudentMail\\\":11:{s:8:\\\"fullname\\\";s:10:\\\"ogua toure\\\";s:8:\\\"regemail\\\";s:21:\\\"GES91116@osms.edu.com\\\";s:2:\\\"id\\\";s:36:\\\"98fc24ed-3530-4175-b9e6-f037f726945a\\\";s:6:\\\"locale\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}s:8:\\\"channels\\\";a:1:{i:0;s:4:\\\"mail\\\";}s:5:\\\"tries\\\";N;s:7:\\\"timeout\\\";N;s:3:\\\"job\\\";N;s:10:\\\"connection\\\";N;s:5:\\\"queue\\\";N;s:15:\\\"chainConnection\\\";N;s:10:\\\"chainQueue\\\";N;s:5:\\\"delay\\\";N;s:10:\\\"middleware\\\";a:0:{}s:7:\\\"chained\\\";a:0:{}}\"}}', 0, NULL, 1649245628, 1649245628);
 
 -- --------------------------------------------------------
 
@@ -356,6 +335,41 @@ CREATE TABLE `lecturers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lec_cources`
+--
+
+CREATE TABLE `lec_cources` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `lecturer_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lec_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `course` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `lec_cources`
+--
+
+INSERT INTO `lec_cources` (`id`, `lecturer_id`, `lec_name`, `course`, `code`, `created_at`, `updated_at`) VALUES
+(1, '5', 'Ahmed Ahia Ogua', 'Business Management 1', 'BGEC100', NULL, NULL),
+(2, '5', 'Ahmed Ahia Ogua', 'Business Law ', 'BGEC101', NULL, NULL),
+(3, '5', 'Ahmed Ahia Ogua', 'Intro to Computer Skills', 'BGEC102', NULL, NULL),
+(4, '5', 'Ahmed Ahia Ogua', 'Business Statisties', 'BGEC103', NULL, NULL),
+(5, '5', 'Ahmed Ahia Ogua', 'Communication Skills', 'BGEC104', NULL, NULL),
+(6, '5', 'Ahmed Ahia Ogua', 'Business Management 11', 'BGEC105', NULL, NULL),
+(7, '5', 'Ahmed Ahia Ogua', 'Business Communication 1', 'BGEC106', NULL, NULL),
+(8, '5', 'Ahmed Ahia Ogua', 'Intro to Organisation Behaviour', 'BGEC107', NULL, NULL),
+(9, '5', 'Ahmed Ahia Ogua', 'Elements of Economics', 'BGEC108', NULL, NULL),
+(10, '5', 'Ahmed Ahia Ogua', 'Principles of Marketing', 'BGEC109', NULL, NULL),
+(11, '5', 'Ahmed Ahia Ogua', 'Business Communication  11', 'BGEC110', NULL, NULL),
+(12, '15', 'Toure Domingo', 'Economy of Ghana', 'BCPC203', NULL, NULL),
+(15, '15', 'Toure Domingo', 'Sales Management', 'BCPC207', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1014,6 +1028,7 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (3, 'App\\User', 21),
 (3, 'App\\User', 22),
 (3, 'App\\User', 23),
+(3, 'App\\User', 24),
 (4, 'App\\User', 5);
 
 -- --------------------------------------------------------
@@ -1416,6 +1431,43 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at
 (383, 'create Programs and Courses', 'web', NULL, NULL),
 (384, 'edit Programs and Courses', 'web', NULL, NULL),
 (385, 'delete Programs and Courses', 'web', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `personalinfos`
+--
+
+CREATE TABLE `personalinfos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `osncode_id` int(11) DEFAULT NULL,
+  `surname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `middlename` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `firstnames` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `dateofbirth` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `religion` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `denomination` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `placeofbirth` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nationality` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hometown` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `region` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `disability` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `postcode` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `maritalstutus` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `profileimg` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `approve` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
+  `approved` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
+  `academicyear` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `year` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -2165,8 +2217,8 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`id`, `user_id`, `role`, `fullname`, `dateofbirth`, `address`, `faculty`, `gender`, `religion`, `qualification`, `number`, `fathername`, `mothername`, `maritalstatus`, `workexperience`, `eployid`, `salarygrade`, `salary`, `acctitle`, `accnum`, `bankname`, `bankbranch`, `resumedoc`, `created_at`, `updated_at`) VALUES
-(1, '5', 'Lecturer', 'Ahmed Ahia Ogua', '2021-11-22', 'P. o. box ts 367', 'Others', 'Male', 'Moslem', 'Bsc in information mngmrnt', '0272185091', 'ogua', 'Ahmed Mason', 'Married', 'Bsc in information mngmrnt', 'LEC1019330', 'Grade 2', '2000', NULL, NULL, NULL, NULL, 'Resume/jmXifWkqXJlWlKVhgd2NLj78yUBSLtqPTKvGjorC.pdf', NULL, NULL),
-(2, '15', 'Front_desk_help', 'Toure Domingo', '2021-11-25', 'P. o. box ts 367', 'Help Desk', 'Male', 'Moslem', 'bsc science', '0272185090', 'Junior Lamere', 'Ahmed Mason', 'Married', 'bsc science', 'OSMS1037870', 'Grade 1', '1000', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(1, '5', 'Lecturer', 'Ahmed Ahia Ogua', '2021-11-22', 'P. o. box ts 367', 'Others', 'Male', 'Moslem', 'Bsc in information mngmrnt', '0272185091', 'ogua', 'Ahmed Mason', 'Married', 'Bsc in information mngmrnt', 'LEC1019330', 'Grade 2', '2000', NULL, NULL, NULL, NULL, 'Resume/jmXifWkqXJlWlKVhgd2NLj78yUBSLtqPTKvGjorC.pdf', '2022-03-24 10:17:51', '2022-03-24 10:17:51'),
+(2, '15', 'Front_desk_help', 'Toure Domingo', '2021-11-25', 'P. o. box ts 367', 'Help Desk', 'Male', 'Moslem', 'bsc science', '0272185090', 'Junior Lamere', 'Ahmed Mason', 'Married', 'bsc science', 'OSMS1037870', 'Grade 1', '1000', NULL, NULL, NULL, NULL, NULL, '2022-03-24 10:17:51', '2022-03-24 10:17:51');
 
 -- --------------------------------------------------------
 
@@ -2279,11 +2331,12 @@ CREATE TABLE `studentinfos` (
 --
 
 INSERT INTO `studentinfos` (`id`, `user_id`, `fullname`, `gender`, `dateofbirth`, `religion`, `denomination`, `placeofbirth`, `nationality`, `hometown`, `region`, `disability`, `postcode`, `address`, `email`, `phone`, `maritalstutus`, `entrylevel`, `session`, `programme`, `type`, `currentlevel`, `indexnumber`, `gurdianname`, `relationship`, `occupation`, `mobile`, `employed`, `status`, `admitted`, `completion`, `academic_year`, `created_at`, `updated_at`, `progcode`, `duration`, `completstatus`, `title`) VALUES
-(2, 3, 'Ahia  Ahmed', 'Male', '2021-11-08', 'Muslem', 'Christain', 'Teshie', 'Ghanaian', 'Teshie', 'Greater Accra', 'No', '00233', 'P. o. box ts 367', 'ogua@yahoo.com', '0272185090', 'Single', 'Level 100', 'Morning Session', 'Bachelor of Science  in Information Technology Management', 'Degree Programme', 'Level 100', 'GES11112', 'Ahmed Amartei Kudjoe', 'Mother', 'Trader', '0272185090', 'No', '1', 'AUG,2021', 'AUG,2025', '2020-2021', NULL, NULL, 'BITM', '1', 'Graduating', 'Mr'),
-(14, 20, 'Zibit Amartey Junior', 'Male', '2021-11-17', 'Accra', 'Accra', 'Accra', 'Accra', 'Accra', 'Accra', 'No', '00233', 'P. o. box ts 367', 'junior@yahoo.com', '+233272185090', 'Single', 'Level 100', 'Morning Session', 'Bachelor of Science in Information Technology Management', 'Degree Programme', 'Level 100', 'GES43740', 'Abigai Agoa', 'Mother', 'Trader', '0208129151', 'No', '1', 'AUG,2021', 'AUG,2025', '2020-2021', NULL, NULL, 'BITM', '4', NULL, 'Mr'),
-(15, 21, 'Mamoud Billal Kidija', 'Male', '2021-12-03', 'Christian', 'Christian', 'Tesg=hie', 'Ghanaian', 'Accra', '', 'No', '00233', 'minor stree\r\nSuit', 'test@gmail.com', '0272185091', 'Single', 'Level 200', 'Morning Session', 'Bachelor of Science in Information Technology Management ', ' Degree Programme', 'Level 200', 'GES26801', 'Akua Mason', 'MOTHER', 'STUDENT', '0272185091', 'Yes', '1', 'AUG,2021', 'AUG2024', '2020-2021', NULL, NULL, ' BITM ', '4', NULL, 'Mr'),
-(16, 22, 'Toure Ogua', 'Male', '2021-12-02', 'Moslem', 'Christian', 'Teshie', 'Ghanaian', 'Accra', '', 'No', '00233', 'P. o. box ts 367', 'ogua@ogua.com', '0272185091', 'Single', 'Level 200', 'Morning Session', 'Bachelor of Arts in Public Relations Management ', ' Degree Programme', 'Level 200', 'GES79152', 'AHMED', 'MOTHER', 'STUDENT', '+233272185090', 'Yes', '1', 'AUG,2021', 'AUG2024', '2020-2021', NULL, NULL, ' BAPR ', ' 4 ', NULL, 'Mr'),
-(17, 23, 'Abigai Agoe Adjie', 'Female', '2021-12-09', 'Moslem', 'Christian', 'Tesg=hie', 'Ghanaian', 'Accra', '', 'Disabled', '00233', 'P. o. box ts 367', 'abi@gmail.com', '0272185091', 'Married', 'Level 300', 'Morning Session', 'Diploma in Accounting ', ' Diploma Programme', 'Level 300', 'GES54920', 'Ahmed Ahia', 'MOTHER', 'STUDENT', '0272185090', 'Yes', '1', 'AUG,2021', 'AUG2024', '2020-2021', NULL, NULL, ' DIAA ', ' 3 ', NULL, 'Mrs');
+(2, 3, 'Ahia  Ahmed', 'Male', '2021-11-08', 'Muslem', 'Christain', 'Teshie', 'Ghanaian', 'Teshie', 'Greater Accra', 'No', '00233', 'P. o. box ts 367', 'ogua@yahoo.com', '0272185090', 'Single', 'Level 100', 'Morning Session', 'Bachelor of Science  in Information Technology Management', 'Degree Programme', 'Level 100', 'GES11112', 'Ahmed Amartei Kudjoe', 'Mother', 'Trader', '0272185090', 'No', '1', 'AUG,2021', 'AUG,2025', '2020-2021', '2022-03-24 10:10:14', '2022-03-23 10:10:14', 'BITM', '1', 'Graduating', 'Mr'),
+(14, 20, 'Zibit Amartey Junior', 'Male', '2021-11-17', 'Accra', 'Accra', 'Accra', 'Accra', 'Accra', 'Accra', 'No', '00233', 'P. o. box ts 367', 'junior@yahoo.com', '+233272185090', 'Single', 'Level 100', 'Morning Session', 'Bachelor of Science in Information Technology Management', 'Degree Programme', 'Level 100', 'GES43740', 'Abigai Agoa', 'Mother', 'Trader', '0208129151', 'No', '1', 'AUG,2021', 'AUG,2025', '2020-2021', '2022-03-24 10:10:14', '2022-03-23 10:10:14', 'BITM', '4', NULL, 'Mr'),
+(15, 21, 'Mamoud Billal Kidija', 'Male', '2021-12-03', 'Christian', 'Christian', 'Tesg=hie', 'Ghanaian', 'Accra', '', 'No', '00233', 'minor stree\r\nSuit', 'test@gmail.com', '0272185091', 'Single', 'Level 200', 'Morning Session', 'Bachelor of Science in Information Technology Management ', ' Degree Programme', 'Level 200', 'GES26801', 'Akua Mason', 'MOTHER', 'STUDENT', '0272185091', 'Yes', '1', 'AUG,2021', 'AUG2024', '2020-2021', '2022-03-24 10:10:14', '2022-03-23 10:10:14', ' BITM ', '4', NULL, 'Mr'),
+(16, 22, 'Toure Ogua', 'Male', '2021-12-02', 'Moslem', 'Christian', 'Teshie', 'Ghanaian', 'Accra', '', 'No', '00233', 'P. o. box ts 367', 'ogua@ogua.com', '0272185091', 'Single', 'Level 200', 'Morning Session', 'Bachelor of Arts in Public Relations Management ', ' Degree Programme', 'Level 200', 'GES79152', 'AHMED', 'MOTHER', 'STUDENT', '+233272185090', 'Yes', '1', 'AUG,2021', 'AUG2024', '2020-2021', '2022-03-24 10:10:14', '2022-03-23 10:10:14', ' BAPR ', ' 4 ', NULL, 'Mr'),
+(17, 23, 'Abigai Agoe Adjie', 'Female', '2021-12-09', 'Moslem', 'Christian', 'Tesg=hie', 'Ghanaian', 'Accra', '', 'Disabled', '00233', 'P. o. box ts 367', 'abi@gmail.com', '0272185091', 'Married', 'Level 300', 'Morning Session', 'Diploma in Accounting ', ' Diploma Programme', 'Level 300', 'GES54920', 'Ahmed Ahia', 'MOTHER', 'STUDENT', '0272185090', 'Yes', '1', 'AUG,2021', 'AUG2024', '2020-2021', '2022-03-24 10:10:14', '2022-03-23 10:10:14', ' DIAA ', ' 3 ', NULL, 'Mrs'),
+(18, 24, 'ogua toure', 'Male', '2022-04-05', 'hghgh fghgh', 'pensa', 'bnbn', 'Ghanaian', 'Accra', '', 'No', '00233', 'P. o. box ts 367', 'kk@yahoo.com', '0272185091', 'Single', 'Level 100', 'Morning Session', 'Diploma in Accounting ', ' Diploma Programme', 'Level 100', 'GES91116', 'Ahmed Ahia', 'hgh', 'ghgh', '0272185090', 'Yes', '1', 'AUG,2022', 'AUG2025', '2020-2021', '2022-04-06 11:47:02', '2022-04-06 11:47:02', ' DIAA ', ' 3 ', NULL, 'Mr');
 
 -- --------------------------------------------------------
 
@@ -2355,7 +2408,13 @@ INSERT INTO `student_attendances` (`id`, `indexnumber`, `attendance`, `note`, `y
 (45, 'GES43740', 'P', '', '2022', '01', '10', '2022-01-10', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
 (46, 'GES43740', 'P', '', '2022', '01', '13', '2022-01-13', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
 (47, 'GES43740', 'P', '', '2022', '01', '14', '2022-01-14', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
-(48, 'GES43740', 'P', '', '2022', '01', '17', '2022-01-17', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL);
+(48, 'GES43740', 'P', '', '2022', '01', '17', '2022-01-17', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
+(49, 'GES11112', 'P', '', '2022', '03', '02', '2022-03-02', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
+(50, 'GES11112', 'P', '', '2022', '03', '03', '2022-03-03', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
+(51, 'GES43740', 'P', '', '2022', '03', '02', '2022-03-02', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
+(52, 'GES43740', 'P', '', '2022', '03', '03', '2022-03-03', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
+(53, 'GES11112', 'P', '', '2022', '04', '06', '2022-04-06', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL),
+(54, 'GES43740', 'P', '', '2022', '04', '06', '2022-04-06', 'First Semester', '2020-2021', 'BGEC100', 'Morning Session', '1', 'Ahmed Ahia', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2616,7 +2675,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `active_status`, `dark_mode`, `messe
 (20, 'Zibit Amartey Junior', 'ges43740@osms.edu.com', 0, 0, '#2180f3', 'avatar.png', NULL, 'GES43740', '0', '0', 'profile_img/HxrrnpLAlECxtNWVxpJ6nzQSuUQTPcHR2Nw91mme.jpeg', '$2y$10$bKu5coHUToNvHIk.cGmfQ.Gx54pepqipJxoJ66o5TcJBXlVhEJmeK', NULL, NULL, NULL, 0, 0, 'junior@yahoo.com'),
 (21, 'Mamoud Billal Kidija', 'GES26801@osms.edu.com', 0, 0, '#2180f3', 'avatar.png', NULL, 'GES26801', '0', '0', 'profileimage/0t4wBgXpzGr0UyXQC8p1Yp2T9zMzyRUoYJQIhnWs.jpg', '$2y$10$jfxJ2eG3FRW6hFTPUTiIW.eD40R0BzMeiGft5JF.hRI/mKVnGqDoe', NULL, NULL, NULL, 0, 0, 'test@gmail.com'),
 (22, 'Toure Ogua', 'GES79152@osms.edu.com', 0, 0, '#2180f3', 'avatar.png', NULL, 'GES79152', '0', '0', 'profileimage/APIU2K96ftbfXqlCdQ7tYkt3P8SSSUjvCdOnj9PZ.jpg', '$2y$10$UPYTASs9S2hqhBUBexJuDe99YcfYcRAhDBT3KprxXMokGengVtzLW', NULL, NULL, NULL, 0, 0, 'ogua@ogua.com'),
-(23, 'Abigai Agoe Adjie', 'GES54920@osms.edu.com', 0, 0, '#2180f3', 'avatar.png', NULL, 'GES54920', '0', '0', 'profileimage/I0gmRP8H7tFSgGIMFHxjfJPU7jBurHrNN1fDCDuz.jpg', '$2y$10$aUu7kblrlHgk3y2iHPFrZ.MkDsdnyNGS3u7nF16iavDvPmDih/gUu', NULL, NULL, NULL, 0, 0, 'abi@gmail.com');
+(23, 'Abigai Agoe Adjie', 'GES54920@osms.edu.com', 0, 0, '#2180f3', 'avatar.png', NULL, 'GES54920', '0', '0', 'profileimage/I0gmRP8H7tFSgGIMFHxjfJPU7jBurHrNN1fDCDuz.jpg', '$2y$10$aUu7kblrlHgk3y2iHPFrZ.MkDsdnyNGS3u7nF16iavDvPmDih/gUu', NULL, NULL, NULL, 0, 0, 'abi@gmail.com'),
+(24, 'ogua toure', 'GES91116@osms.edu.com', 0, 0, '#2180f3', 'avatar.png', NULL, 'GES91116', '0', '0', NULL, '$2y$10$CXvSTXASrqObklzcbzfTu.Ls1uKoDTLHe6GlTT7hqtG2xVW.TmKIm', NULL, '2022-04-06 11:47:01', '2022-04-06 11:47:01', 0, 0, 'kk@yahoo.com');
 
 -- --------------------------------------------------------
 
@@ -2662,50 +2722,6 @@ CREATE TABLE `wallettops` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `websockets_statistics_entries`
---
-
-CREATE TABLE `websockets_statistics_entries` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `app_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `peak_connection_count` int(11) NOT NULL,
-  `websocket_message_count` int(11) NOT NULL,
-  `api_message_count` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zoomwebs`
---
-
-CREATE TABLE `zoomwebs` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `zoomid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lec_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lec_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `starttime` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `duration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `level` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `session` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `programme` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cousers` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `join_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `start_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `academicyear` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `semester` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 --
 -- Indexes for dumped tables
 --
@@ -2742,14 +2758,6 @@ ALTER TABLE `assignments`
 --
 ALTER TABLE `attendamces`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `audits`
---
-ALTER TABLE `audits`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `audits_auditable_type_auditable_id_index` (`auditable_type`,`auditable_id`),
-  ADD KEY `audits_user_id_user_type_index` (`user_id`,`user_type`);
 
 --
 -- Indexes for table `coureregistrations`
@@ -2793,6 +2801,12 @@ ALTER TABLE `language_lines`
 -- Indexes for table `lecturers`
 --
 ALTER TABLE `lecturers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lec_cources`
+--
+ALTER TABLE `lec_cources`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2843,6 +2857,12 @@ ALTER TABLE `password_resets`
 -- Indexes for table `permissions`
 --
 ALTER TABLE `permissions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `personalinfos`
+--
+ALTER TABLE `personalinfos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3003,18 +3023,6 @@ ALTER TABLE `wallettops`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `websockets_statistics_entries`
---
-ALTER TABLE `websockets_statistics_entries`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `zoomwebs`
---
-ALTER TABLE `zoomwebs`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -3049,12 +3057,6 @@ ALTER TABLE `attendamces`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `audits`
---
-ALTER TABLE `audits`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `coureregistrations`
 --
 ALTER TABLE `coureregistrations`
@@ -3082,7 +3084,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `language_lines`
@@ -3095,6 +3097,12 @@ ALTER TABLE `language_lines`
 --
 ALTER TABLE `lecturers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `lec_cources`
+--
+ALTER TABLE `lec_cources`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `menupermissions`
@@ -3119,6 +3127,12 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `permissions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=386;
+
+--
+-- AUTO_INCREMENT for table `personalinfos`
+--
+ALTER TABLE `personalinfos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `programmecourses`
@@ -3196,13 +3210,13 @@ ALTER TABLE `staffmeetings`
 -- AUTO_INCREMENT for table `studentinfos`
 --
 ALTER TABLE `studentinfos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `student_attendances`
 --
 ALTER TABLE `student_attendances`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `sub_menus`
@@ -3238,7 +3252,7 @@ ALTER TABLE `uploadedtimetables`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `wallets`
@@ -3250,18 +3264,6 @@ ALTER TABLE `wallets`
 -- AUTO_INCREMENT for table `wallettops`
 --
 ALTER TABLE `wallettops`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `websockets_statistics_entries`
---
-ALTER TABLE `websockets_statistics_entries`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `zoomwebs`
---
-ALTER TABLE `zoomwebs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
