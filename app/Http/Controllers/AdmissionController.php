@@ -1953,7 +1953,10 @@ public function newStudent_register(Request $request){
 
   $user->assignRole('Student');
 
-  $prog = explode("-", $request->input('programme'));
+  $prog = explode("-",$request->input('programme'));
+
+
+  //dd($prog);
 
   $name = $prog[0];
   $code = $prog[1];

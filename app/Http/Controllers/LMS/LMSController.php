@@ -755,6 +755,7 @@ public function getstudentsattenca(Request $request)
   ->where('currentlevel', $level)->get();
 
 
+
   $attendance = StudentAttendances::select(['indexnumber','date'])
   ->where('coursecode', $code)
   ->where('session', $session)

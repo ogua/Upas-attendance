@@ -248,7 +248,7 @@ OSMS Admission Management
                             <select class="form-control" name="programme">
                                 <option>{{ old('programme') }}</option>
                                 @foreach($prog as $row)
-                                <option value="{{$row->name}} - {{$row->code}} - {{$row->duration}} - {{$row->type}}">{{$row->name}}</option>
+                                <option value="{{$row->name}}-{{$row->code}}-{{$row->duration}}-{{$row->type}}">{{$row->name}}</option>
                                 @endforeach
                             </select>
                             <span class="help-block">@error('programme'){{ $message }}@enderror</span>

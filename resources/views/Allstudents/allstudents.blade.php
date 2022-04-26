@@ -140,9 +140,9 @@
             {data: 'profileimg', render: function(data){
 
 
-                if (data == "null") {
+                if (data == "") {
 
-                    return data+'<img src="/mages/user.png" class="img-circle"width="50" height="50">';
+                    return data+'<img src="/images/user.png" class="img-circle"width="50" height="50">';
 
                 }else{
 

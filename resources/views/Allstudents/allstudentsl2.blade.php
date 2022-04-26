@@ -140,7 +140,18 @@
         columns: [
             {data: 'id'},
             {data: 'profileimg', render: function(data){
-            	return '<img src="{{asset('storage')}}/'+data+'" class="img-circle"width="50" height="50">';
+
+
+                if (data == "") {
+
+                    return data+'<img src="/images/user.png" class="img-circle"width="50" height="50">';
+
+                }else{
+
+                    return '<img src="{{asset('storage')}}/'+data+'" class="img-circle"width="50" height="50">';
+
+                }
+                
             },
             orderable: false
         },
