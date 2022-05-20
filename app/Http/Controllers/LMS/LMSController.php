@@ -965,13 +965,10 @@ public function getstudentsattenca_save(Request $request)
     $academicyear = $request->post('year');
     $semester = $request->post('semester');
     $session = $request->post('session');
+    $curdate = $request->post('curdate');
 
+    //dd($request);
 
-   //dd($request);
-
-   // dd($count);
-
-    
 
     foreach ($mumber as $key => $value) {
 
@@ -979,14 +976,13 @@ public function getstudentsattenca_save(Request $request)
        $loop = $mumber[$key];
        $user = $request->post('user'.$loop);
 
+       if ($request->has('date'.$loop)) {
+
        $date = $request->post('date'.$loop);
 
        $countdate = count($date);
 
        $curindex = $user;
-
-
-      // echo $key.'=>'.$value;
 
 
        for ($i=0; $i < $countdate; $i++) { 
@@ -1031,6 +1027,15 @@ public function getstudentsattenca_save(Request $request)
 
         StudentAttendances::insert($data);
           
+        }
+
+      }else{
+
+            //$currentdate = $date[0];
+            $month = date('m',strtotime($curdate));
+
+            $attendance = StudentAttendances::where('indexnumber', $user)
+                ->where('month',$month)->delete();
         }
 
 

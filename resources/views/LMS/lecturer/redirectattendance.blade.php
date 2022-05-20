@@ -62,6 +62,8 @@
 
                     <input type="hidden" name="session" value="{{ $session }}" />
 
+                    <input type="hidden" name="curdate" value="{{ $date }}" />
+
             <div class="table-responsive">
                 <table id="example1" class="table table-bordered table-striped datatable">
                     <thead>
@@ -91,7 +93,7 @@
 
                         @foreach($students as $student)
 
-                        {{-- {{ $day = now()->setYear($year)->setMonth($month)->setDay($i)->format('Y-m-d') }} --}}
+                        
 
                         <input type="hidden" name="user{{ $loops }}" value="{{ $student->indexnumber }}" />
 
