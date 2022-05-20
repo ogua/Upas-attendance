@@ -992,7 +992,6 @@ public function getstudentsattenca_save(Request $request)
           $month = substr($datenow,5,2);
           $year = substr($datenow,0,4);
 
-
           $data  = [
             'indexnumber' => $curindex,
             'attendance' => 'P',
