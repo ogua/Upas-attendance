@@ -265,19 +265,19 @@ li {
 </style>
 @livewireStyles
 </head>
-<body class="hold-transition skin-blue sidebar-mini" oncontextmenu="return true;">
-  <div class="wrapper">
+<body class="hold-transition skin-blue sidebar-mini" oncontextmenu="return true;" style="background-color: #412f79;">
+  <div class="wrapper" >
 
     <header class="main-header">
       <!-- Logo -->
-      <a href="index2.html" class="logo">
+      <a href="#" class="logo" style="background-color: #412f79;">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>OS</b>MS</span>
+        <span class="logo-mini"><b>UP</b>SA</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>OSMS</b></span>
+        <span class="logo-lg"><b>UPSA</b></span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
-      <nav class="navbar navbar-static-top">
+      <nav class="navbar navbar-static-top" style="background-color: #412f79;">
         <!-- Sidebar toggle button-->
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
           <span class="sr-only">Toggle navigation</span>
@@ -361,7 +361,7 @@ li {
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left ">
-        <img src="{{ asset('storage') }}/{{Auth::user()->pro_pic}}" class="img-circle" alt="User Image" height="50px" width="50px" >
+        <img src="{{ URL::to('images/UPSA1.png') }}" class="img-thumbnail" alt="User Image" height="50px" width="50px" >
       </div>
       <div class="pull-left info">
         <p> {{ Auth::user()->name }} </p>

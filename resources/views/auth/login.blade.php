@@ -1,14 +1,20 @@
 @extends('layouts.main2')
 
 @section('infos')
-login
+
 @endsection
 
 
 @section('login_here')
 
+<div class="text-center" style="margin-bottom: 20px;">
+      <img src="{{ URL::to('images/UPSA1.png') }}" alt="" width="100">
+    </div>
+
 <!-- /.login-logo -->
 <div class="login-box-body">
+
+    
   <p class="login-box-msg">Sign in to start your session</p>
 
   <form  action="{{ route('login') }}" method="post">
@@ -43,7 +49,7 @@ login
       </div>
       <!-- /.col -->
       <div class="col-xs-4">
-        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        <button type="submit" class="btn btn-primary btn-block btn-flat" style="background-color: #d8bc35; border: 1px solid #d8bc35;">Sign In</button>
       </div>
       <!-- /.col -->
     </div>
